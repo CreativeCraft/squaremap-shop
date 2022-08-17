@@ -14,7 +14,6 @@ import org.bukkit.Location;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.LinkedHashMap;
-import java.util.Locale;
 
 public class SquaremapTask extends BukkitRunnable {
     private final SimpleLayerProvider provider;

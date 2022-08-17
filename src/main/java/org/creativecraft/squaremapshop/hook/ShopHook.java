@@ -5,7 +5,7 @@ import com.snowgears.shop.shop.AbstractShop;
 import org.bukkit.Location;
 import org.creativecraft.squaremapshop.SquaremapShop;
 
-import java.util.*;
+import java.util.LinkedHashMap;
 
 public class ShopHook {
     private final SquaremapShop plugin;
