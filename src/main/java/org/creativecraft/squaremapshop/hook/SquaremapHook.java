@@ -32,6 +32,8 @@ public class SquaremapHook {
                 .builder(plugin.getSettings().getConfig().getString("settings.control.label", "Shops"))
                 .showControls(plugin.getSettings().getConfig().getBoolean("settings.control.show"))
                 .defaultHidden(plugin.getSettings().getConfig().getBoolean("settings.control.hide"))
+                .layerPriority(plugin.getSettings().getConfig().getInt("settings.layer.priority"))
+                .zIndex(plugin.getSettings().getConfig().getInt("settings.layer.z-index"))
                 .build();
 
             value.layerRegistry().register(Key.of("shop_" + world.getUID()), provider);
