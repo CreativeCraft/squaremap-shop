@@ -42,8 +42,8 @@ public class SettingsConfig {
         settings.addDefault("settings.control.show", true);
         settings.addDefault("settings.control.hide-by-default", false);
 
-        settings.addDefault("settings.layer.z-index", 999);
-        settings.addDefault("settings.layer.priority", 999);
+        settings.addDefault("settings.layer.z-index", 1);
+        settings.addDefault("settings.layer.priority", 1);
 
         settings.addDefault("settings.icon.size", 10);
 

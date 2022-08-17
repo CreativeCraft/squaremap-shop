@@ -25,6 +25,10 @@ public class ShopHook {
 
         plugin.getShop().getShopHandler().getShopOwners().forEach(player -> {
             handler.getShops(player.getUniqueId()).forEach(shop -> {
+                if (shop.getChestLocation() == null) {
+                    return;
+                }
+
                 shops.put(shop.getChestLocation(), shop);
             });
         });
