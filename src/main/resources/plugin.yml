@@ -1,0 +1,7 @@
+name: squaremap-shop
+version: "${version}"
+description: "A squaremap implementation for Shop."
+authors: [Log1x]
+main: org.creativecraft.squaremapshop.SquaremapShop
+api-version: "1.18"
+depend: [Shop, squaremap]
