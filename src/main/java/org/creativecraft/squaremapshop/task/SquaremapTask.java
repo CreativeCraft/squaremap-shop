@@ -1,7 +1,7 @@
 package org.creativecraft.squaremapshop.task;
 
 import com.snowgears.shop.shop.AbstractShop;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.WordUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.creativecraft.squaremapshop.SquaremapShop;
@@ -69,7 +69,7 @@ public class SquaremapTask extends BukkitRunnable {
         ItemMeta itemMeta = shop.getItemStack().getItemMeta();
         String itemName = itemMeta != null && itemMeta.hasDisplayName() ?
             ChatColor.stripColor(itemMeta.getDisplayName()) :
-            StringUtils.capitalize(
+            WordUtils.capitalize(
                 shop.getItemStack().getType().name().toLowerCase().replace("_", " ")
             );
 
@@ -78,7 +78,7 @@ public class SquaremapTask extends BukkitRunnable {
             .clickTooltip(
                 plugin.getSettings().getConfig().getString("settings.tooltip.shop")
                     .replace("{owner}", shop.getOwnerName())
-                    .replace("{type}", StringUtils.capitalize(shop.getType().name().toLowerCase()))
+                    .replace("{type}", WordUtils.capitalize(shop.getType().name().toLowerCase()))
                     .replace("{item}", itemName)
                     .replace("{price}", shop.getPricePerItemString())
                     .replace("{amount}", Integer.toString(shop.getAmount()))

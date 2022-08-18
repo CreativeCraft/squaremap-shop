@@ -25,7 +25,7 @@ public class ShopHook {
 
         handler.getShopOwners().forEach(player -> {
             handler.getShops(player.getUniqueId()).forEach(shop -> {
-                if (shop.getChestLocation() == null) {
+                if (!shop.isInitialized() || shop.getChestLocation() == null) {
                     return;
                 }
 
