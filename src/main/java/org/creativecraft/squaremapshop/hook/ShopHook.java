@@ -23,7 +23,7 @@ public class ShopHook {
         ShopHandler handler = plugin.getShop().getShopHandler();
         LinkedHashMap<Location, AbstractShop> shops = new LinkedHashMap<>();
 
-        plugin.getShop().getShopHandler().getShopOwners().forEach(player -> {
+        handler.getShopOwners().forEach(player -> {
             handler.getShops(player.getUniqueId()).forEach(shop -> {
                 if (shop.getChestLocation() == null) {
                     return;

@@ -69,7 +69,9 @@ public class SquaremapTask extends BukkitRunnable {
         ItemMeta itemMeta = shop.getItemStack().getItemMeta();
         String itemName = itemMeta != null && itemMeta.hasDisplayName() ?
             ChatColor.stripColor(itemMeta.getDisplayName()) :
-            shop.getItemStack().getType().name();
+            StringUtils.capitalize(
+                shop.getItemStack().getType().name().toLowerCase().replace("_", " ")
+            );
 
         MarkerOptions.Builder options = MarkerOptions
             .builder()
