@@ -25,11 +25,11 @@ public class ShopHook {
 
         handler.getShopOwners().forEach(player -> {
             handler.getShops(player.getUniqueId()).forEach(shop -> {
-                if (!shop.isInitialized() || shop.getChestLocation() == null) {
+                if (!shop.isInitialized() || shop.getSignLocation() == null) {
                     return;
                 }
 
-                shops.put(shop.getChestLocation(), shop);
+                shops.put(shop.getSignLocation(), shop);
             });
         });
 
